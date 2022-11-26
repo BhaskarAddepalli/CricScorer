@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        tools:context=".Chat.ChatAct"
+        android:layout_marginBottom="4dp">
+
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="200dp"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintBottom_toTopOf="@id/ll">-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:id="@+id/rcy"
+            app:stackFromEnd="true"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/ll"
+            android:scrollbars="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+<!--        </ScrollView>-->
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_weight="85"
+                android:layout_marginLeft="10dp"
+                android:padding="8dp"
+                android:id="@+id/edt"
+                android:background="@drawable/messageback"
+                android:hint="type" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/btn"
+                android:onClick="click"
+                android:src="@drawable/img_2"
+                android:background="@color/white"
+                android:layout_weight="15" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

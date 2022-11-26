@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.example.cricscorer.ui.Batsman" />
+        <variable
+            name="user1"
+            type="com.example.cricscorer.ui.Bowler" />
+
+
+
+    </data>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ScoreCard">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1st inning"
+            android:textSize="25sp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/t1"
+            android:id="@+id/txt"/>
+
+            <include
+                android:id="@+id/t1"
+                layout="@layout/middlescore1"
+                app:bt="@{user}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toBottomOf="@+id/txt"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/btscorecardrecycle"
+                />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/t1"
+            android:id="@+id/btscorecardrecycle"
+            tools:listitem="@layout/scorecardlistitem"/>
+
+        <include
+            layout="@layout/middlescore2"
+            android:id="@+id/btlabel2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            app:bw="@{user1}"
+            app:layout_constraintTop_toBottomOf="@id/btscorecardrecycle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btlabel2"
+            android:id="@+id/bwscorecardrecycle"
+            tools:listitem="@layout/scorecardlistitem"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2nd inning"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/bwscorecardrecycle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/t11"
+            android:id="@+id/txt2"/>
+
+        <include
+            android:id="@+id/t11"
+            layout="@layout/middlescore1"
+            app:bt="@{user}"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@+id/txt2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btscorecardrecycle1"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/t11"
+            android:id="@+id/btscorecardrecycle1"
+            tools:listitem="@layout/scorecardlistitem"/>
+
+        <include
+            layout="@layout/middlescore2"
+            android:id="@+id/btlabel21"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="5dp"
+            app:bw="@{user1}"
+            app:layout_constraintTop_toBottomOf="@id/btscorecardrecycle1" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/btlabel21"
+            android:id="@+id/bwscorecardrecycle1"
+            tools:listitem="@layout/scorecardlistitem"
+            />
+
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="270dp"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/bwscorecardrecycle1"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent">-->
+        <include
+            layout="@layout/activity_chat2"
+            android:id="@+id/sc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/bwscorecardrecycle1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+<!--        </ScrollView>-->
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

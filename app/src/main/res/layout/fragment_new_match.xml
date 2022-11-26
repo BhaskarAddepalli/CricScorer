@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <TextView
+        android:id="@+id/teams"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="30dp"
+        android:text="Teams"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/teamA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Team A"
+        android:layout_below="@+id/teams" />
+
+    <EditText
+        android:id="@+id/teamB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Team B"
+        android:layout_below="@+id/teamA" />
+
+    <TextView
+        android:id="@+id/toss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="1dp"
+        android:text="Toss"
+        android:textSize="20sp"
+        android:layout_below="@+id/teamB" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rd1"
+        android:layout_below="@+id/toss"
+        android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/teamAToss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="10dp"
+        android:text="Team A"
+        android:layout_below="@+id/toss"/>
+
+    <RadioButton
+        android:id="@+id/teamBtoss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/teamAToss"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="80dp"
+        android:text="Team B" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="51dp"
+        android:text="Opted to"
+        android:layout_below="@+id/rd1"/>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rd2"
+        android:layout_below="@+id/choice"
+        android:orientation="horizontal">
+    <RadioButton
+        android:id="@+id/bat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="Bat"
+        android:layout_below="@+id/choice" />
+
+    <RadioButton
+        android:id="@+id/ball"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ball"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="100dp"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/Overs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="25dp"
+        android:text="Overs"
+        android:layout_below="@+id/rd2" />
+
+    <EditText
+        android:id="@+id/OversEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Overs"
+       android:layout_below="@+id/Overs" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="25dp"
+        android:text="Start Match"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/OversEditText"/>
+
+</RelativeLayout>

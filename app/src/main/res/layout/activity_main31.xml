@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3"
+    android:padding="15dp"
+    android:background="@drawable/bg1">
+
+    <TextView
+        android:id="@+id/Striker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Striker"
+        android:textSize="25sp"
+        android:layout_marginTop="40dp"
+        />
+
+    <EditText
+        android:id="@+id/PlayerName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Player name"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/Striker"/>
+
+    <TextView
+        android:id="@+id/NonStriker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Non-Striker"
+        android:textSize="25sp"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/PlayerName"
+        />
+
+    <EditText
+        android:id="@+id/Playername1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Player name"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/NonStriker"/>
+
+
+
+    <TextView
+        android:id="@+id/opBowler"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opening Bowler"
+        android:textSize="25sp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/Playername1"
+        />
+
+    <EditText
+        android:id="@+id/bwname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Player name"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/opBowler"/>
+
+    <Button
+        android:id="@+id/startMatch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Match"
+        android:layout_below="@id/bwname"
+        android:layout_marginTop="45dp"/>
+</RelativeLayout>
